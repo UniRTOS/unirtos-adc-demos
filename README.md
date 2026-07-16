@@ -1,4 +1,4 @@
-# adc_demos
+# unirtos-adc-demos
 
 本仓库推荐通过 unirtos-cli 的 demo 工作流使用，以保证创建、环境拉取和编译流程一致。
 
