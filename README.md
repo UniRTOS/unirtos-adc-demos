@@ -1,55 +1,57 @@
 # unirtos-adc-demos
 
-本仓库推荐通过 unirtos-cli 的 demo 工作流使用，以保证创建、环境拉取和编译流程一致。
+[中文](README.zh.md) | English
 
-## 功能描述
+This repository is recommended to be used via the unirtos-cli demo workflow to ensure a consistent process for project creation, environment setup, and compilation.
 
-本 Demo 展示 ADC 采样与电压读取的基础开发流程，适合作为模拟量采集与外设调试的入门样例。
+## Feature Description
 
-- 演示 ADC0 与 ADC1 的电压读取流程
-- 支持按不同 scale 档位循环采样，观察量程变化对结果的影响
-- 便于扩展为传感器采集、阈值告警、平均滤波与数据上报逻辑
+This demo demonstrates the basic development workflow for ADC sampling and voltage reading, and is suitable as a beginner example for analog data acquisition and peripheral debugging.
 
-## 快速上手
+- Demonstrates voltage reading for ADC0 and ADC1
+- Supports cyclic sampling across different scale levels to observe the effect of range changes on results
+- Easily extensible to sensor acquisition, threshold alerting, averaging filters, and data reporting logic
 
-### 1. 安装 UniRTOS 工具链
+## Quick Start
 
-- [开发准备](https://www.quectel.com.cn/unirtos/docs?docs_page=快速上手/开发准备/开发准备.html)
-- [安装交叉编译工具链](https://www.quectel.com.cn/unirtos/docs?docs_page=快速上手/环境搭建/环境搭建.html)
-- [安装 Python3](https://www.python.org/downloads/)
-- [安装 git](https://git-scm.com)
-- 安装 unirtos-cli：pip install unirtos-cli
+### 1. Install the UniRTOS Toolchain
 
-以上工具安装完成后，确认以下命令可用：
+- [Development Preparation](https://www.quectel.com.cn/unirtos/docs?docs_page=快速上手/开发准备/开发准备.html)
+- [Install the Cross-Compilation Toolchain](https://www.quectel.com.cn/unirtos/docs?docs_page=快速上手/环境搭建/环境搭建.html)
+- [Install Python3](https://www.python.org/downloads/)
+- [Install git](https://git-scm.com)
+- Install unirtos-cli: `pip install unirtos-cli`
+
+Once all the above tools are installed, verify the following commands are available:
 
 ```bash
-python --version # Python3
+python --version    # Python3
 git --version
-unirtos --version # 1.0.5 及以上版本
-unirtos-cli version # 1.0.11 及以上版本
+unirtos --version   # version 1.0.5 or above
+unirtos-cli version # version 1.0.11 or above
 ```
 
-### 2. 使用 unirtos-cli 拉取 demo
+### 2. Pull the Demo Using unirtos-cli
 
-先查看可用 demo 与版本：
+List available demos and versions:
 
 ```bash
 unirtos-cli ls-demos
 ```
 
-创建本 demo 工程：
+Create this demo project:
 
 ```bash
 unirtos-cli new -r unirtos-adc-demos
 ```
 
-如需指定版本：
+To specify a version:
 
 ```bash
 unirtos-cli new -r unirtos-adc-demos -v 1.0.0
 ```
 
-### 3. 进入工程并编译
+### 3. Enter the Project and Build
 
 ```bash
 cd unirtos-adc-demos-1.0.0
@@ -57,24 +59,24 @@ unirtos-cli env-setup
 unirtos-cli build
 ```
 
-## 常用命令
+## Common Commands
 
 ```bash
-# 打开 SDK 菜单配置
+# Open the SDK menu configuration
 unirtos-cli menuconfig
 
-# 清理构建产物
+# Clean build artifacts
 unirtos-cli clean
 ```
 
-## 技术社区
+## Technical Community
 
-技术社区：https://forumschinese.quectel.com/c/66-category/66
+Technical Community: https://forumschinese.quectel.com/c/66-category/66
 
-## 贡献指南
+## Contribution Guidelines
 
-欢迎参与共建，建议按以下方式提交：
-- 提交前先执行一次基础验证：env-setup、build、clean。
-- 使用清晰的提交说明，描述改动目的、影响范围和验证结果。
-- 新增功能或行为变化时，同步更新 README 与相关文档。
-- 通过 Issue 或 Pull Request 提交问题修复与功能改进。
+Contributions are welcome. Please follow these guidelines when submitting:
+- Run a basic validation before submitting: env-setup, build, clean.
+- Use clear commit messages describing the purpose of the change, its scope of impact, and verification results.
+- When adding new features or changing behavior, update the README and related documentation accordingly.
+- Submit bug fixes and feature improvements via Issues or Pull Requests.
