@@ -1,5 +1,7 @@
 # unirtos-adc-demos
 
+[中文](README.zh.md) | English
+
 This repository is recommended to be used via the unirtos-cli demo workflow to ensure a consistent process for project creation, environment setup, and compilation.
 
 ## Feature Description
